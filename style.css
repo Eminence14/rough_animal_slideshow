@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 30px;
+    background-color: #fffafa;
+}
+body .container {
+    width: 53%;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 3px solid black;
+    overflow-x: hidden;
+}
+.display {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.display img {
+    width: 100%;
+    object-fit: cover;
+}
+.button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    z-index: 10;
+    height: 100%;
+    width: 30px;
+    padding-top: 35%;
+}
+.prev {
+    position: absolute;
+    left: 0;
+}
+.prev::before {
+    content: '';
+    width: 5px;
+    height: 15px;
+    margin-left: 10px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.prev::after {
+    content: '';
+    width: 5px;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 8px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.prev:hover {
+    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(255,255,255, 0.01));
+}
+.next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.next:hover {
+    background: linear-gradient(90deg, rgba(255,255,255, 0.01), rgba(0,0,0,0.5));
+}
+.next::before {
+    content: '';
+    width: 5px;
+    height: 15px;
+    margin-left: 15px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.next::after {
+    content: '';
+    width: 5px;
+    height: 15px;
+    margin-top: 8px;
+    margin-left: 15px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg);
+}
